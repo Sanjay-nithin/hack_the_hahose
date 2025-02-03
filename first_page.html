@@ -4,47 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F&T</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(2, 200px);
-            gap: 20px;
-            text-align: center;
-        }
-        .box {
-            width: 200px;
-            height: 150px;
-            background: #007bff;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .box:hover {
-            background: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="first_page.css"/>    
 </head>
 <body>
+    <h1>CHOOSE YOUR INPUT METHOD</h1>
     <div class="container">
-        <a href="live.html" class="box">Live</a>
-        <a href="audio.html" class="box">Audio File</a>
-        <a href="pdf.html" class="box">PDF File</a>
-        <a href="text.html" class="box">Raw Text</a>
+        <div class="box" onclick="toggleBox(this)">
+            Live
+            <div class="content">Real-time input from camera or microphone</div>
+        </div>
+        <div class="box" onclick="toggleBox(this)">
+            Audio File
+            <div class="content">Upload an audio file for processing</div>
+        </div>
+        <div class="box" onclick="toggleBox(this)">
+            PDF File
+            <div class="content">Upload a PDF document for extraction</div>
+        </div>
+        <div class="box" onclick="toggleBox(this)">
+            Raw Text
+            <div class="content">Manually enter raw text for analysis</div>
+        </div>
     </div>
+
+    <script>
+        function toggleBox(element) {
+            element.classList.toggle('expanded'); // Toggle expansion
+            let content = element.querySelector('.content');
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
