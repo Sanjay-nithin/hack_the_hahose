@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cube3</title>
+    <title>F&T</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 200px);
+            gap: 20px;
+            text-align: center;
+        }
+        .box {
+            width: 200px;
+            height: 150px;
+            background: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .box:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illum, earum optio odit repellat expedita pariatur at ipsa perferendis repellendus beatae quasi fuga ratione ex alias, omnis iste, debitis quidem?</p>
-    <p>Finally got it</p>
-      
-
-    <h4>djcdjcbdjucb</h4>
+    <div class="container">
+        <a href="live.html" class="box">Live</a>
+        <a href="audio.html" class="box">Audio File</a>
+        <a href="pdf.html" class="box">PDF File</a>
+        <a href="text.html" class="box">Raw Text</a>
+    </div>
 </body>
 </html>
