@@ -9,25 +9,39 @@
 }
 
 body {
-    background: linear-gradient(to right, #141e30, #243b55);
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(images/login_page3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Works properly on desktop */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+    body {
+        background-size: 300%; /* Ensures the image covers the whole screen */
+        background-position: center; /* Keeps the image centered */
+    }
 }
 
 .login-container {
     background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    padding: 40px;
+    margin: 40px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     text-align: center;
     width: 300px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(16, 5, 5, 0.2);
 }
 
 h2 {
-    color: #fff;
+    color: #1f1515;
     margin-bottom: 20px;
 }
 
@@ -40,10 +54,10 @@ h2 {
     width: 100%;
     padding: 10px;
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #ac1111;
     background: transparent;
     outline: none;
-    color: #fff;
+    color: #0b0a0a;
     font-size: 16px;
 }
 
@@ -51,7 +65,7 @@ h2 {
     position: absolute;
     left: 10px;
     top: 10px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(189, 38, 186, 0.7);
     font-size: 16px;
     transition: 0.3s;
 }
